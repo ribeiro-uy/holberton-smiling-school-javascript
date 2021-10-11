@@ -212,3 +212,15 @@ function cards(q = '', topic = 'all', sort = 'most_popular') {
     })
 }
 cards()
+
+/*
+ * Replace static video card by dynamic loading
+ */
+
+$('.form-input input .select button').change(function() {
+    let q = $('#search').val()
+    let topic = $('#dropdownMenu2').val()
+    let sort = $('dropdownMenu3').val()
+    console.log(q, topic, sort)
+    cards(q, topic, sort)
+})
